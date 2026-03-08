@@ -21,8 +21,3 @@ A sleek, responsive, and visually stunning Age Calculator built with HTML, CSS, 
 - **HTML5**: For the structure of the web page.
 - **CSS3**: For the Glassmorphic layout, gradient animations, and overall styling.
 - **Vanilla JavaScript**: For capturing user input and handling the complex date math logic.
-
-## 📸 Preview
-
-_(You can add a screenshot of the calculator here by replacing `[screenshot.png]` with an actual image path.)_
-![Age Calculator Preview]([screenshot.png])
