@@ -12,7 +12,7 @@
     <meta name="author" content="Age Calculator">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook --> 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Age Calculator | Calculate Your Exact Age Online">
     <meta property="og:description" content="Use this free online Age Calculator to find out your exact age in years, months, and days based on your date of birth. Fast, accurate, and easy to use.">
@@ -43,13 +43,52 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <h1>Age Calculator</h1>
-            <div class="input-box">
-                <input type="date" id="date">
-                <button onclick="calculateAge()">Calculate</button>
+            <div class="header">
+                <h1>Age Calculator</h1>
+                <p>Uncover your exact age across time</p>
             </div>
-            <div class="result">
-                <p id="result"></p>
+            
+            <div class="input-section">
+                <div class="date-wrapper" id="date-wrapper">
+                    <label>SELECT BIRTH DATE</label>
+                    <div class="custom-date-picker" id="custom-date-picker">
+                        <div class="selected-date" id="selected-date-display">Select birth date...</div>
+                        <div class="calendar-dropdown" id="calendar-dropdown">
+                            <div class="calendar-header">
+                                <button class="cal-nav-btn" id="prev-month">&#10094;</button>
+                                <div class="month-year-select">
+                                    <select id="month-select" class="cal-select"></select>
+                                    <select id="year-select" class="cal-select"></select>
+                                </div>
+                                <button class="cal-nav-btn" id="next-month">&#10095;</button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                            </div>
+                            <div class="calendar-days" id="calendar-days"></div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="calculateAge()" class="calc-btn">
+                    <span>Calculate Time</span>
+                </button>
+            </div>
+            
+            <div id="error-message" class="error-text"></div>
+
+            <div class="result-section" id="result-section">
+                <div class="result-card">
+                    <div class="value" id="res-years">-</div>
+                    <div class="label">YEARS</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="res-months">-</div>
+                    <div class="label">MONTHS</div>
+                </div>
+                <div class="result-card">
+                    <div class="value" id="res-days">-</div>
+                    <div class="label">DAYS</div>
+                </div>
             </div>
         </div>
     </div>
